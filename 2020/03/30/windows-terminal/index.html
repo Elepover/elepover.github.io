@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Windows Terminal 折腾日记 - 如何让 Windows 控制台更好看 | 
+        
+        Elepover&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+    <link rel="icon" href="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="相信大家早就看够了 Windows 的命令提示符了吧（笑">
+    <meta name="keywords" content="elepover,kruin,blog,hexo,Windows Terminal,Windows 10,customization,cygwin,terminal,oh-my-zsh">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body {
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material-icons.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/jquery.min.js", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Elepover&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://daily.elepover.com/2020/03/30/windows-terminal/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Elepover&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://static.elepover.com/avatar/favicon/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://daily.elepover.com/2020/03/30/windows-terminal/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Windows Terminal 折腾日记 - 如何让 Windows 控制台更好看 | Elepover&#39;s Blog">
+    <meta property="og:image" content="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+    <meta property="og:description" content="相信大家早就看够了 Windows 的命令提示符了吧（笑">
+    <meta property="og:article:tag" content="Windows Terminal"> <meta property="og:article:tag" content="Windows 10"> <meta property="og:article:tag" content="customization"> <meta property="og:article:tag" content="cygwin"> <meta property="og:article:tag" content="terminal"> <meta property="og:article:tag" content="oh-my-zsh"> 
+
+    
+        <meta property="article:published_time" content="Mon Mar 30 2020 00:00:00 GMT+0000">
+        <meta property="article:modified_time" content="Sat Jun 26 2021 08:24:02 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://daily.elepover.com/2020/03/30/windows-terminal/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://daily.elepover.com/2020/03/30/windows-terminal/index.html",
+    "headline": "Windows Terminal 折腾日记 - 如何让 Windows 控制台更好看",
+    "datePublished": "Mon Mar 30 2020 00:00:00 GMT+0000",
+    "dateModified": "Sat Jun 26 2021 08:24:02 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Elepover",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://static.elepover.com/avatar/avatar.png"
+        },
+        "description": "<i>In the sight, there shines light.</i>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Elepover&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://static.elepover.com/avatar/favicon/favicon_circle.png"
+        }
+    },
+    "keywords": ",Windows Terminal,Windows 10,customization,cygwin,terminal,oh-my-zshelepover,kruin,blog,hexo",
+    "description": "相信大家早就看够了 Windows 的命令提示符了吧（笑",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-101174425-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-Windows-Terminal"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装 Windows Terminal</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-cygwin"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装 cygwin</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E4%BD%93"><span class="post-toc-number">3.</span> <span class="post-toc-text">获取字体</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE-Windows-Terminal-%E6%A0%B7%E5%BC%8F"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置 Windows Terminal 样式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE-oh-my-zsh"><span class="post-toc-number">5.</span> <span class="post-toc-text">配置 oh my zsh</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-oh-my-zsh"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">安装 oh my zsh</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">配置主题</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%9B%BF%E6%8D%A2-Win-X-%E8%8F%9C%E5%8D%95"><span class="post-toc-number">6.</span> <span class="post-toc-text">替换 Win + X 菜单</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/pic/windowsterminal.png)">
+    
+            <p class="article-headline-p">
+                Windows Terminal 折腾日记 - 如何让 Windows 控制台更好看
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://static.elepover.com/avatar/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Elepover</strong>
+        <span>Mar 30, 2020</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Windows-Terminal/" rel="tag">Windows Terminal</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/customization/" rel="tag">customization</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/cygwin/" rel="tag">cygwin</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/oh-my-zsh/" rel="tag">oh-my-zsh</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/terminal/" rel="tag">terminal</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Windows Terminal 折腾日记 - 如何让 Windows 控制台更好看&url=https://daily.elepover.com/2020/03/30/windows-terminal/index.html&via=Elepover" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://daily.elepover.com/2020/03/30/windows-terminal/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://daily.elepover.com/2020/03/30/windows-terminal/index.html&text=Windows Terminal 折腾日记 - 如何让 Windows 控制台更好看" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>相信大家早就看够了 Windows 的命令提示符了吧（笑</p>
+<span id="more"></span>
+
+<p>2019 年，微软首次<a target="_blank" rel="noopener" href="https://github.com/microsoft/terminal">开源</a>并在 <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9N0DX20HK701">Microsoft Store (Windows 1903+)</a> 上上架了一个全新的 Windows 终端应用，称为 “Windows Terminal”。</p>
+<p>终于，微软给 Windows 提供了一个“现代化”的命令行程序。Windows Terminal 的功能主要有：</p>
+<ul>
+<li>多标签页</li>
+<li>24 位颜色</li>
+<li>支持鼠标输入</li>
+<li>ANSI 转义序列</li>
+<li>微软讲述人支持</li>
+<li>主题、背景图片、全屏模式</li>
+<li>UTF-8 及 UTF-16 字符集支持</li>
+<li>以 HTML 或富文本格式复制到剪贴板</li>
+<li>基于 DirectWrite 的文本渲染硬件加速</li>
+<li>应用全新的 Fluent Design，基于 UWP 平台</li>
+</ul>
+<p>而 Windows Terminal 仍然处于 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta">Beta 阶段</a>，还没有图形化的设置界面，所有设置都需要通过修改 JSON 配置文件实现，对部分用户显得不太友好。</p>
+<p>配置完成后，Windows Terminal 就像这样:</p>
+<p><img src="/pic/finaleffect.png" alt="最终效果图"></p>
+<p>下面我们来一步步地把 Windows Terminal 调教成我们喜欢的样子。</p>
+<h2 id="安装-Windows-Terminal"><a href="#安装-Windows-Terminal" class="headerlink" title="安装 Windows Terminal"></a>安装 Windows Terminal</h2><p>要体验 Windows Terminal，首先需要您的系统版本为 Windows 10 <strong>1903</strong> 或更高。</p>
+<p>在 <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9N0DX20HK701">Microsoft Store</a> 下载 Windows Terminal</p>
+<h2 id="安装-cygwin"><a href="#安装-cygwin" class="headerlink" title="安装 cygwin"></a>安装 cygwin</h2><p><a target="_blank" rel="noopener" href="https://cygwin.com/setup-x86_64.exe">在此</a>下载 cygwin 安装程序，一路下一步。</p>
+<p>当选择镜像源的时候，国内用户可以选择自带的 163（网易）镜像源，或使用<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a>所提供的镜像：</p>
+<p><code>https://mirrors.tuna.tsinghua.edu.cn/cygwin/</code></p>
+<p>接下来，在左上角搜索 <code>zsh</code> 包，双击 <code>Skip</code>，选择为最新版本，继续。</p>
+<blockquote>
+<p>建议安装 <code>curl</code>, <code>wget</code>, <code>git</code> 及 <code>nano</code> 包。</p>
+<p>如您已经安装 Git for Windows 则不需要 <code>git</code> 包。</p>
+<p>如果需要 C/C++ 开发环境，可以安装对应的包，在此不再赘述。</p>
+</blockquote>
+<h2 id="获取字体"><a href="#获取字体" class="headerlink" title="获取字体"></a>获取字体</h2><p>在这里推荐 <a target="_blank" rel="noopener" href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a>，您也可以选用任何支持 Powerline 字符的字体。</p>
+<h2 id="配置-Windows-Terminal-样式"><a href="#配置-Windows-Terminal-样式" class="headerlink" title="配置 Windows Terminal 样式"></a>配置 Windows Terminal 样式</h2><p>在新建标签页按钮右侧的菜单中，选择 <code>Settings</code></p>
+<p>Windows Terminal 会尝试打开默认的 JSON 文件编辑器，可在 <code>profiles.list</code> 下新增如下配置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 使用亚克力材质透明效果</span></span><br><span class="line">    <span class="attr">&quot;useAcrylic&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 亚克力材质不透明度</span></span><br><span class="line">    <span class="attr">&quot;acrylicOpacity&quot;</span>: <span class="number">0.7</span>,</span><br><span class="line">    <span class="comment">// 背景图片位置</span></span><br><span class="line">    <span class="comment">// 建议存放于 AppData 文件夹，您也可以自行选择其它路径</span></span><br><span class="line">    <span class="attr">&quot;backgroundImage&quot;</span>: <span class="string">&quot;%AppData%\\Windows Terminal\\bg.jpg&quot;</span>,</span><br><span class="line">    <span class="comment">// 背景图片对齐方向</span></span><br><span class="line">    <span class="comment">// topLeft: 左上角</span></span><br><span class="line">    <span class="comment">// topRight: 右上角</span></span><br><span class="line">    <span class="comment">// bottomLeft: 左下角</span></span><br><span class="line">    <span class="comment">// bottomRight: 右下角</span></span><br><span class="line">    <span class="attr">&quot;backgroundImageAlignment&quot;</span>: <span class="string">&quot;topLeft&quot;</span>,</span><br><span class="line">    <span class="comment">// 背景图片不透明度</span></span><br><span class="line">    <span class="attr">&quot;backgroundImageOpacity&quot;</span>: <span class="number">0.7</span>,</span><br><span class="line">    <span class="comment">// 背景图片拉伸模式</span></span><br><span class="line">    <span class="comment">// none: 无</span></span><br><span class="line">    <span class="comment">// fill: 填充</span></span><br><span class="line">    <span class="comment">// uniform: 适应</span></span><br><span class="line">    <span class="comment">// uniformToFill: 适应并填满区域</span></span><br><span class="line">    <span class="attr">&quot;backgroundImageStretchMode&quot;</span>: <span class="string">&quot;uniformToFill&quot;</span>,</span><br><span class="line">    <span class="comment">// 是否在 shell 退出时关闭窗口</span></span><br><span class="line">    <span class="attr">&quot;closeOnExit&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 颜色配置文件，可选:</span></span><br><span class="line">    <span class="comment">// Campbell</span></span><br><span class="line">    <span class="comment">// Solarized Light</span></span><br><span class="line">    <span class="comment">// Solarized Dark</span></span><br><span class="line">    <span class="comment">// One Half Light</span></span><br><span class="line">    <span class="comment">// One Half Dark</span></span><br><span class="line">    <span class="attr">&quot;colorScheme&quot;</span>: <span class="string">&quot;One Half Dark&quot;</span>,</span><br><span class="line">    <span class="comment">// 启动 shell 时的命令行</span></span><br><span class="line">    <span class="attr">&quot;commandline&quot;</span>: <span class="string">&quot;zsh.exe --login -i&quot;</span>,</span><br><span class="line">    <span class="comment">// 光标形状</span></span><br><span class="line">    <span class="comment">// vintage: ▃</span></span><br><span class="line">    <span class="comment">// bar: ┃</span></span><br><span class="line">    <span class="comment">// underscore: ▁</span></span><br><span class="line">    <span class="comment">// filledBox: █</span></span><br><span class="line">    <span class="comment">// emptyBox: ▯</span></span><br><span class="line">    <span class="attr">&quot;cursorShape&quot;</span>: <span class="string">&quot;underscore&quot;</span>,</span><br><span class="line">    <span class="comment">// 字体 FontFamily 名称</span></span><br><span class="line">    <span class="attr">&quot;fontFace&quot;</span>: <span class="string">&quot;JetBrains Mono&quot;</span>,</span><br><span class="line">    <span class="comment">// 字体大小，磅数</span></span><br><span class="line">    <span class="attr">&quot;fontSize&quot;</span>: <span class="number">10</span>,</span><br><span class="line">    <span class="comment">// GUID，请尝试随机生成</span></span><br><span class="line">    <span class="attr">&quot;guid&quot;</span>: <span class="string">&quot;&#123;5dfce6c2-f7a3-4ae2-bd4e-096f2fd979a5&#125;&quot;</span>,</span><br><span class="line">    <span class="comment">// 是否隐藏该配置文件</span></span><br><span class="line">    <span class="attr">&quot;hidden&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">// 历史记录大小（行数）</span></span><br><span class="line">    <span class="attr">&quot;historySize&quot;</span>: <span class="number">10000</span>,</span><br><span class="line">    <span class="comment">// 在下拉菜单中的图标</span></span><br><span class="line">    <span class="attr">&quot;icon&quot;</span>: <span class="string">&quot;%HOMEDRIVE%\\cygwin\\Cygwin-Terminal.ico&quot;</span>,</span><br><span class="line">    <span class="comment">// 配置文件名称</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;cygwin/zsh&quot;</span>,</span><br><span class="line">    <span class="comment">// 起始目录</span></span><br><span class="line">    <span class="comment">// 建议设置为 cygwin 的 home 文件夹</span></span><br><span class="line">    <span class="attr">&quot;startingDirectory&quot;</span>: <span class="string">&quot;%HOMEDRIVE%\\cygwin\\home\\%Username%&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>别忘了在顶层设置 <code>&quot;defaultProfile&quot;: &quot;&#123;5dfce6c2-f7a3-4ae2-bd4e-096f2fd979a5&#125;&quot;</code>（此处填入你想设置为默认配置文件的 GUID）</p>
+<h2 id="配置-oh-my-zsh"><a href="#配置-oh-my-zsh" class="headerlink" title="配置 oh my zsh"></a>配置 oh my zsh</h2><h3 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh my zsh"></a>安装 oh my zsh</h3><p>启动 Windows Terminal，如果配置正确，此时应该启动的是 zsh 的默认界面。</p>
+<p>按 Q 无视初次启动提示，直接运行如下命令：</p>
+<p><code>sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</code></p>
+<blockquote>
+<p>若您没有安装 <code>curl</code> 包，请尝试下载上方命令链接中的脚本文件并通过 <code>chmod +x install.sh &amp;&amp; ./install.sh</code> 的命令手动执行。</p>
+<p>如出现 “<code>GnuTLS: Error in the pull function.</code>” 报错，请检查互联网连接。</p>
+</blockquote>
+<p>oh my zsh 应该能自动进行安装。</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>运行 <code>nano .zshrc</code> 以修改 zsh 配置文件</p>
+<blockquote>
+<p>如您未安装 <code>nano</code> 软件包，也可以自己选择喜欢的文本编辑器。</p>
+</blockquote>
+<p>将默认的 <code>ZSH_THEME=robbyrussell</code> 修改为 <code>ZSH_THEME=agnoster</code>，并保存。</p>
+<blockquote>
+<p>如果您是中文系统，建议将 <code>#export LANG=en_US.UTF-8</code> 一行取消注释（去掉前导的 <code>#</code> 符号），以免发生文本错误。</p>
+</blockquote>
+<p>重新打开 Windows Terminal 以使改动生效。</p>
+<blockquote>
+<p>如果您遇到命令执行后需要数秒才能出现输入区域的问题，请尝试以下两个指令以禁用 git 扩展:</p>
+<p><code>git config --add oh-my-zsh.hide-status 1</code></p>
+<p><code>git config --add oh-my-zsh.hide-dirty 1</code></p>
+</blockquote>
+<h2 id="替换-Win-X-菜单"><a href="#替换-Win-X-菜单" class="headerlink" title="替换 Win + X 菜单"></a>替换 Win + X 菜单</h2><blockquote>
+<p>教程目前提供的内容仅适用于已在 <code>设置 -&gt; 个性化 -&gt; 任务栏</code> 中将“<strong>当我右键单击“开始”按钮或按下 Windows 键 + X 时，在菜单中将命令提示符替换为 Windows PowerShell</strong>”选项关闭的情况。</p>
+</blockquote>
+<p>在资源管理器中进入如下路径：</p>
+<p><code>%AppData%\..\Local\Microsoft\Windows\WinX\Group3</code></p>
+<p>按住 Shift，右键空白区域，选择 “在此处打开 PowerShell 窗口”。</p>
+<p>粘贴以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> <span class="string">&#x27;.\01 - Command Prompt.lnk&#x27;</span> <span class="string">&#x27;.\01 - Command Prompt.lnk.bak&#x27;</span></span><br><span class="line"><span class="built_in">mv</span> <span class="string">&#x27;.\02 - Command Prompt.lnk&#x27;</span> <span class="string">&#x27;.\02 - Command Prompt.lnk.bak&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>从“开始”菜单中将 Windows Terminal 拖到桌面，再将快捷方式拖进文件夹中。</p>
+<p>重命名为 <code>02 - Command Prompt</code>（扩展名应当已经被资源管理器隐藏）</p>
+<p>重复操作，此次重命名为 <code>01 - Command Prompt</code></p>
+<p>运行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file</span> = <span class="string">&quot;01 - Command Prompt.lnk&quot;</span></span><br><span class="line"><span class="variable">$raw</span> = [<span class="type">System.IO.File</span>]::ReadAllBytes(<span class="variable">$file</span>)</span><br><span class="line"><span class="variable">$raw</span>[<span class="number">0</span><span class="type">x15</span>] = raw[<span class="number">0</span><span class="type">x15</span>] <span class="operator">-bor</span> <span class="number">0</span>x20</span><br><span class="line">[<span class="type">System.IO.File</span>]::WriteAllBytes(<span class="variable">$file</span>, <span class="variable">$raw</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这条命令强行将快捷方式不可勾选的“以管理员身份运行”选项设置为“开”，以实现以管理员权限运行 Windows Terminal 的效果。</p>
+<p>此时，Windows + X 菜单的“命令提示符”及“命令提示符（管理员）”应当均正确指向 Windows Terminal 了。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://daily.elepover.com/2020/03/30/windows-terminal/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://daily.elepover.com/2020/03/30/windows-terminal/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//elepover-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//elepover-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2020/05/15/optimus/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2020/01/14/2019-annual-report/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://static.elepover.com/avatar/avatar.png" alt="Elepover's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="https://t.me/kruintian" target="_blank" title="Contact me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Contact me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/05/">May 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">March 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/02/">February 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">May 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">March 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">January 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">October 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">14</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">info</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/donate" title="Donate">
+                
+                    <i class="material-icons sidebar-material-icons">money</i>
+                
+                Donate
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/friends" title="Friends">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                Friends
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                Timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/comments" title="Comments">
+                
+                    <i class="material-icons sidebar-material-icons">comment</i>
+                
+                Comments
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Elepover" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/kruintian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Elepover's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/lazyload.min.js", true)</script>
+
+
+
+    <script>lsloader.load("js_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/js.min.js", true)</script>
+
+
+
+    <script>lsloader.load("np_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/nprogress.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/hanabi-browser-bundle.js", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://apis.elepover.com/bing/');
+    });
+</script>
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            不使用 TWRP，为你的 Pixel 设备刷入 Android 12 和 Magisk | 
+        
+        Elepover&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+    <link rel="icon" href="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Android 11 的继任者，Android 12 (S) 已经推出了第一个公共 beta 版，并向 Pixel 等设备开放使用。
+但 TWRP 之类的第三方 Recovery 可能还没做好 Android 12 的支持，是不是 Magisk 就无望了呢？其实并不。">
+    <meta name="keywords" content="elepover,kruin,blog,hexo,android,android 12,android s,google,pixel,phone">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body {
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material-icons.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/jquery.min.js", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Elepover&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://daily.elepover.com/2021/05/19/android-s/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Elepover&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://static.elepover.com/avatar/favicon/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://daily.elepover.com/2021/05/19/android-s/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="不使用 TWRP，为你的 Pixel 设备刷入 Android 12 和 Magisk | Elepover&#39;s Blog">
+    <meta property="og:image" content="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+    <meta property="og:description" content="Android 11 的继任者，Android 12 (S) 已经推出了第一个公共 beta 版，并向 Pixel 等设备开放使用。
+但 TWRP 之类的第三方 Recovery 可能还没做好 Android 12 的支持，是不是 Magisk 就无望了呢？其实并不。">
+    <meta property="og:article:tag" content="android"> <meta property="og:article:tag" content="android 12"> <meta property="og:article:tag" content="android s"> <meta property="og:article:tag" content="google"> <meta property="og:article:tag" content="pixel"> <meta property="og:article:tag" content="phone"> 
+
+    
+        <meta property="article:published_time" content="Wed May 19 2021 00:00:00 GMT+0000">
+        <meta property="article:modified_time" content="Sat Jun 26 2021 08:24:02 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://daily.elepover.com/2021/05/19/android-s/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://daily.elepover.com/2021/05/19/android-s/index.html",
+    "headline": "不使用 TWRP，为你的 Pixel 设备刷入 Android 12 和 Magisk",
+    "datePublished": "Wed May 19 2021 00:00:00 GMT+0000",
+    "dateModified": "Sat Jun 26 2021 08:24:02 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Elepover",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://static.elepover.com/avatar/avatar.png"
+        },
+        "description": "<i>In the sight, there shines light.</i>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Elepover&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://static.elepover.com/avatar/favicon/favicon_circle.png"
+        }
+    },
+    "keywords": ",android,android 12,android s,google,pixel,phoneelepover,kruin,blog,hexo",
+    "description": "Android 11 的继任者，Android 12 (S) 已经推出了第一个公共 beta 版，并向 Pixel 等设备开放使用。
+但 TWRP 之类的第三方 Recovery 可能还没做好 Android 12 的支持，是不是 Magisk 就无望了呢？其实并不。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-101174425-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x0-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x0 准备工作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x1-%E8%A7%A3%E9%94%81-Bootloader"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x1 解锁 Bootloader</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A4%87%E4%BB%BD%E4%BD%A0%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">备份你的数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%80%80%E5%87%BA-Google-%E8%B4%A6%E6%88%B7"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">退出 Google 账户</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%81%E8%AE%B8-Bootloader-%E8%A7%A3%E9%94%81"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">允许 Bootloader 解锁</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BF%9B%E5%85%A5-Bootloader"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">进入 Bootloader</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A7%A3%E9%94%81"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">解锁</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x2-%E5%88%B7%E5%85%A5-Android-12"><span class="post-toc-number">3.</span> <span class="post-toc-text">0x2 刷入 Android 12</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x3-%E6%89%93%E8%A1%A5%E4%B8%81"><span class="post-toc-number">4.</span> <span class="post-toc-text">0x3 打补丁</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x4-%E6%B0%B8%E4%B9%85%E5%8C%96%E5%88%B7%E5%85%A5-Magisk"><span class="post-toc-number">5.</span> <span class="post-toc-text">0x4 永久化刷入 Magisk</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x5-%E5%AE%8C%E6%88%90"><span class="post-toc-number">6.</span> <span class="post-toc-text">0x5 完成</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x1-%E4%BB%A5%E9%98%B2%E4%B8%87%E4%B8%80"><span class="post-toc-number">7.</span> <span class="post-toc-text">-0x1 以防万一</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/pic/android-s.png)">
+    
+            <p class="article-headline-p">
+                不使用 TWRP，为你的 Pixel 设备刷入 Android 12 和 Magisk
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://static.elepover.com/avatar/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Elepover</strong>
+        <span>May 19, 2021</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/android/" rel="tag">android</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/android-12/" rel="tag">android 12</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/android-s/" rel="tag">android s</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/google/" rel="tag">google</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/phone/" rel="tag">phone</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/pixel/" rel="tag">pixel</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=不使用 TWRP，为你的 Pixel 设备刷入 Android 12 和 Magisk&url=https://daily.elepover.com/2021/05/19/android-s/index.html&via=Elepover" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://daily.elepover.com/2021/05/19/android-s/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://daily.elepover.com/2021/05/19/android-s/index.html&text=不使用 TWRP，为你的 Pixel 设备刷入 Android 12 和 Magisk" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Android 11 的继任者，Android 12 (S) 已经推出了第一个公共 beta 版，并向 Pixel 等设备开放使用。</p>
+<p>但 TWRP 之类的第三方 Recovery 可能还没做好 Android 12 的支持，是不是 Magisk 就无望了呢？其实并不。</p>
+<span id="more"></span>
+
+<p>跟随这篇文章的步骤，你将可以：</p>
+<ul>
+<li>✓ 刷入最新的 Android 12 Public Beta</li>
+<li>✓ 在无需第三方 Recovery 的情况下刷入 Magisk</li>
+</ul>
+<h2 id="0x0-准备工作"><a href="#0x0-准备工作" class="headerlink" title="0x0 准备工作"></a>0x0 准备工作</h2><p>你将需要：</p>
+<ul>
+<li>Android Platform Tools<ul>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">Windows</a></li>
+<li>macOS<ul>
+<li>Homebrew: <code>brew install android-platform-tools</code></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">直接下载</a></li>
+</ul>
+</li>
+<li>Linux: 直接使用包管理器安装或者<a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">直接下载</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://developer.android.com/about/versions/12/download#factory-images">Android 12 原厂镜像</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases/download/v23.0/Magisk-v23.0.apk">Magisk 23.0</a> 或更高版本</li>
+<li>解锁的 Bootloader</li>
+</ul>
+<blockquote>
+<p>💡 这篇文章里将如同这样标记我在安装过程中踩的坑以及如何回避。还有一些小提示。</p>
+<p>个人配置:</p>
+<ul>
+<li>Pixel 3 (刷入时版本为 Android 11, <code>RQ2A.210505.002</code>，2021 年 5 月)</li>
+<li>macOS Catalina 10.15.7</li>
+<li>Magisk 23.0</li>
+</ul>
+<p>既然你是 Pixel 用户，我们则假设你已经有一定的基本知识。Platform Tools 安装，控制台交互使用之类内容将不再于此赘述。</p>
+</blockquote>
+<blockquote>
+<p>💡 我们使用直接刷入原厂镜像的方式，不需要在 <a target="_blank" rel="noopener" href="https://www.google.com/android/beta#devices">Android Beta 计划</a>注册即可使用。但你如果希望收到后序版本的 OTA 更新，请在设备上登录你的 Google 账户，并在网页中选择注册你的设备。</p>
+</blockquote>
+<p>当你准备好以上工具后，我们就可以开始了。</p>
+<h2 id="0x1-解锁-Bootloader"><a href="#0x1-解锁-Bootloader" class="headerlink" title="0x1 解锁 Bootloader"></a>0x1 解锁 Bootloader</h2><blockquote>
+<p>💡 如果你的 Bootloader 已经解锁，请暂时不要跳过此节。</p>
+</blockquote>
+<h3 id="备份你的数据"><a href="#备份你的数据" class="headerlink" title="备份你的数据"></a>备份你的数据</h3><p><strong>如果你的 Bootloader 还未解锁</strong>，立刻备份你的数据！</p>
+<p>在 Bootloader 解锁过程中，所有应用数据、系统设置等将在解锁过程中被彻底抹去，在一切开始之前，请务必备份你的数据。</p>
+<p><strong>如果你的 Bootloader 已经解锁</strong>，立刻备份你的数据！</p>
+<p>刷入原厂镜像过程中，数据仍然会被一并抹去，请务必在开始前备份你的数据。</p>
+<h3 id="退出-Google-账户"><a href="#退出-Google-账户" class="headerlink" title="退出 Google 账户"></a>退出 Google 账户</h3><blockquote>
+<p>💡 如果你的 Bootloader 已经解锁，即使 FRP 在默认情况下会自动禁用，但仍然建议你执行这一步骤以防万一。你可以跳过本节的剩余部分。</p>
+</blockquote>
+<p>在 <code>设置 &gt; 帐号</code> 中退出你的 Google 账户登录。</p>
+<h3 id="允许-Bootloader-解锁"><a href="#允许-Bootloader-解锁" class="headerlink" title="允许 Bootloader 解锁"></a>允许 Bootloader 解锁</h3><p>在 <code>设置 &gt; 关于手机</code> 中滚动到底部，连续点击「版本号」，直到解锁开发者选项。</p>
+<p>前往 <code>设置 &gt; 系统 &gt; 开发者选项</code>，打开「OEM 解锁」开关。</p>
+<h3 id="进入-Bootloader"><a href="#进入-Bootloader" class="headerlink" title="进入 Bootloader"></a>进入 Bootloader</h3><p>关机或重启，开机时保持按住「音量减」键，直到你看到有红色 ⚠️ 感叹号及红色 “Fastboot mode” 字样时即可松手。</p>
+<blockquote>
+<p>💡 如果你选择重启，则不需要按电源键，保持按住「音量减」键即可。</p>
+<p>如果你直接开机，请快速放开电源键，否则可能被识别成「开机」导致直接进入系统。</p>
+<p>当然，如果你启用了 USB 调试，你也可以直接 <code>adb reboot bootloader</code>，这是最稳定的方法。</p>
+</blockquote>
+<h3 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h3><p>使用 <code>fastboot flashing unlock</code> 解锁 Bootloader，并在手机上使用音量键选择「Unlock」，按电源键确认解锁 Bootloader.</p>
+<blockquote>
+<p>⚠️ 如果选择确认，你的数据将在这一步被清除，请确认你已经备份了重要数据。</p>
+</blockquote>
+<blockquote>
+<p>💡 部分 Pixel 2 XL 有一个特殊的命令：<code>fastboot flashing unlock_critical</code>，但由于 Android 12 并没有对 Pixel 2 系列的官方支持，所有支持的设备均使用上述命令即可。</p>
+</blockquote>
+<h2 id="0x2-刷入-Android-12"><a href="#0x2-刷入-Android-12" class="headerlink" title="0x2 刷入 Android 12"></a>0x2 刷入 Android 12</h2><ol>
+<li>找到我们刚刚下载的 Android 12 原厂镜像，解压 zip.<blockquote>
+<p>💡 如果你使用 Linux 或 macOS，请确定 <code>flash-all.sh</code> 有执行权限，若要添加执行权限，请运行 <code>chmod +x flash-all.sh</code></p>
+</blockquote>
+</li>
+<li><a href="#%E8%BF%9B%E5%85%A5-bootloader">进入 Bootloader</a>.</li>
+<li>刷入 Android 12<ul>
+<li>如果你是 Windows 用户，执行 <code>flash-all.bat</code></li>
+<li>如果你是 Linux 或 macOS 用户，执行 <code>./flash-all.sh</code></li>
+</ul>
+</li>
+<li>等待刷入脚本执行完毕</li>
+</ol>
+<p>至此，Android 12 刷入完毕。</p>
+<h2 id="0x3-打补丁"><a href="#0x3-打补丁" class="headerlink" title="0x3 打补丁"></a>0x3 打补丁</h2><p>适用于 Pixel 3 的 TWRP 停更在了 3.3.0 且不支持 Android 10 或更高版本，于是直接刷入 Magisk 包的方法就无法使用了。</p>
+<ol>
+<li>正常进入系统，正常完成设置</li>
+<li><a href="#%E5%85%81%E8%AE%B8-bootloader-%E8%A7%A3%E9%94%81">解锁开发者选项</a>，打开「USB 调试」</li>
+<li>安装下载好的 Magisk 安装包: <code>adb install Magisk-v23.0.apk</code><blockquote>
+<p>💡 禁用 Google Play Protect 可以显著提高安装速度。</p>
+</blockquote>
+</li>
+<li>找到我们刚刚解压的 zip，其中还有一个 zip，名字类似为<blockquote>
+<p><code>image-设备代号-版本号.zip</code>，如 <code>image-blueline-spb1.210331.013.zip</code></p>
+</blockquote>
+</li>
+<li>将其解压，找到 <code>boot.img</code></li>
+<li>推送到手机: <code>adb push boot.img /sdcard</code></li>
+<li>在 Magisk 应用中，选择「Magisk」卡片上的「安装」</li>
+<li>选择「选择并修补一个文件」，再选中我们刚刚推送到手机上的 <code>boot.img</code><blockquote>
+<p>💡 Magisk 打完补丁后，文件名将有一块随机部分，建议提前改名以便拉取和刷入。</p>
+<p>⚠️ 请勿直接复制粘贴以下命令。</p>
+</blockquote>
+</li>
+<li>待 Magisk 打完补丁后，将此文件从手机中拉至电脑: <code>adb pull /sdcard/Download/Magisk-xxx.img</code></li>
+<li>重启到 Bootloader<blockquote>
+<p>💡 我们已经用上 ADB 了，跑 <code>adb reboot bootloader</code> 即可。</p>
+</blockquote>
+</li>
+<li><strong>启动</strong>打补丁后的 <code>boot.img</code>: <code>fastboot boot Magisk-xxx.img</code><blockquote>
+<p>⚠️ Pixel 3, Pixel 5 已确定，其它 Pixel 设备可能同样受影响。</p>
+<p>直接刷入 Magisk 修补后的 <code>boot.img</code> 将导致无法启动，<strong>请不要使用</strong> <code>fastboot flash boot Magisk-xxx.img</code> 直接刷入！</p>
+</blockquote>
+</li>
+</ol>
+<p>此时你达到了「临时 root」的效果，重启后将失效，接下来我们使它「永久化」。</p>
+<h2 id="0x4-永久化刷入-Magisk"><a href="#0x4-永久化刷入-Magisk" class="headerlink" title="0x4 永久化刷入 Magisk"></a>0x4 永久化刷入 Magisk</h2><ol>
+<li>回到 Magisk 应用</li>
+<li>选择「Magisk」卡片上的「安装」<blockquote>
+<p>💡 此时，你会发现比起之前多了一个选项，而它恰好就是我们需要的。</p>
+</blockquote>
+</li>
+<li>选择「直接安装（推荐）」</li>
+<li>待 Magisk 刷入完成以后，重启即可</li>
+</ol>
+<h2 id="0x5-完成"><a href="#0x5-完成" class="headerlink" title="0x5 完成"></a>0x5 完成</h2><p>全部工作正式完成！接下来可以恢复数据，正常使用了。</p>
+<h2 id="0x1-以防万一"><a href="#0x1-以防万一" class="headerlink" title="-0x1 以防万一"></a>-0x1 以防万一</h2><p>如果遇到以下问题：</p>
+<ul>
+<li>卡在 Google「G」开机动画</li>
+<li>Google logo 出现后直接黑屏重启</li>
+<li>回到 Bootloader 界面，”Enter reason” 显示 <code>no valid slot to boot</code></li>
+</ul>
+<p>那么很不幸，刷入的 <code>boot.img</code> 出了问题，若要在不丢失数据的情况下恢复启动，找到我们刚刚解压的原厂 <code>boot.img</code>，运行 <code>fastboot flash boot boot.img</code>，重启即可。</p>
+<blockquote>
+<p>💡 如果遭遇 <code>no valid slot to boot</code>，很有可能现在的启动槽位不是当前系统所在槽位，请切换槽位后再刷入 <code>boot.img</code></p>
+<p>原理是：原本的启动槽位启动失败后，自动回落到另一个启动槽位，如果仍然启动失败就会回到 Bootloader，等待救援操作。</p>
+<p>检查 Fastboot 界面显示的「Boot slot」，如果是 <code>b</code>，则切换到 <code>a</code>，反之则切换到 <code>b</code>.</p>
+<p>比如，切换到 <code>a</code> 槽位，请使用命令: <code>fastboot --set-active=a</code></p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://daily.elepover.com/2021/05/19/android-s/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://daily.elepover.com/2021/05/19/android-s/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//elepover-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//elepover-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2021/03/27/vsync/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://static.elepover.com/avatar/avatar.png" alt="Elepover's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="https://t.me/kruintian" target="_blank" title="Contact me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Contact me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/05/">May 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">March 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/02/">February 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">May 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">March 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">January 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">October 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">14</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">info</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/donate" title="Donate">
+                
+                    <i class="material-icons sidebar-material-icons">money</i>
+                
+                Donate
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/friends" title="Friends">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                Friends
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                Timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/comments" title="Comments">
+                
+                    <i class="material-icons sidebar-material-icons">comment</i>
+                
+                Comments
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Elepover" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/kruintian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Elepover's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/lazyload.min.js", true)</script>
+
+
+
+    <script>lsloader.load("js_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/js.min.js", true)</script>
+
+
+
+    <script>lsloader.load("np_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/nprogress.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/hanabi-browser-bundle.js", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://apis.elepover.com/bing/');
+    });
+</script>
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

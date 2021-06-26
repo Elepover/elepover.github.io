@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            译：Stadia 游戏工作室之死，精准命中了 Google 的信任危机 | 
+        
+        Elepover&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+    <link rel="icon" href="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="虽然 Stadia 还未葬送在 Google 的手里，但以史为鉴，Stadia 用户应该做好面对最坏结果的准备。">
+    <meta name="keywords" content="elepover,kruin,blog,hexo,google,stadia,killed,translation">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body {
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material-icons.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/jquery.min.js", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Elepover&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Elepover&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://static.elepover.com/avatar/favicon/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="译：Stadia 游戏工作室之死，精准命中了 Google 的信任危机 | Elepover&#39;s Blog">
+    <meta property="og:image" content="https://static.elepover.com/avatar/favicon/favicon_circle.png">
+    <meta property="og:description" content="虽然 Stadia 还未葬送在 Google 的手里，但以史为鉴，Stadia 用户应该做好面对最坏结果的准备。">
+    <meta property="og:article:tag" content="google"> <meta property="og:article:tag" content="stadia"> <meta property="og:article:tag" content="killed"> <meta property="og:article:tag" content="translation"> 
+
+    
+        <meta property="article:published_time" content="Thu Feb 18 2021 14:30:00 GMT+0000">
+        <meta property="article:modified_time" content="Sat Jun 26 2021 08:24:02 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/index.html",
+    "headline": "译：Stadia 游戏工作室之死，精准命中了 Google 的信任危机",
+    "datePublished": "Thu Feb 18 2021 14:30:00 GMT+0000",
+    "dateModified": "Sat Jun 26 2021 08:24:02 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Elepover",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://static.elepover.com/avatar/avatar.png"
+        },
+        "description": "<i>In the sight, there shines light.</i>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Elepover&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://static.elepover.com/avatar/favicon/favicon_circle.png"
+        }
+    },
+    "keywords": ",google,stadia,killed,translationelepover,kruin,blog,hexo",
+    "description": "虽然 Stadia 还未葬送在 Google 的手里，但以史为鉴，Stadia 用户应该做好面对最坏结果的准备。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-101174425-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Stadia-%E7%8A%B9%E5%9C%A8%EF%BC%8CStadia-%E4%B8%87%E5%B2%81%EF%BC%9F"><span class="post-toc-number">1.</span> <span class="post-toc-text">Stadia 犹在，Stadia 万岁？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Google-%E6%B8%B8%E6%88%8F%E6%BD%9C%E5%8A%9B%E7%9A%84%E3%80%8C%E7%99%BD%E6%97%A5%E6%A2%A6%E3%80%8D"><span class="post-toc-number">2.</span> <span class="post-toc-text">Google 游戏潜力的「白日梦」</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%98%AF%E5%B7%A9%E5%9B%BA%EF%BC%8C%E8%BF%98%E6%98%AF%E6%91%A7%E6%AF%81%E5%AE%A2%E6%88%B7%E7%9A%84%E4%BF%A1%E4%BB%BB"><span class="post-toc-number">3.</span> <span class="post-toc-text">是巩固，还是摧毁客户的信任</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E8%80%8C%E5%86%8D%EF%BC%8C%E5%86%8D%E8%80%8C%E4%B8%89"><span class="post-toc-number">4.</span> <span class="post-toc-text">一而再，再而三</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                译：Stadia 游戏工作室之死，精准命中了 Google 的信任危机
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://static.elepover.com/avatar/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Elepover</strong>
+        <span>Feb 18, 2021</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/google/" rel="tag">google</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/killed/" rel="tag">killed</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/stadia/" rel="tag">stadia</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/translation/" rel="tag">translation</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=译：Stadia 游戏工作室之死，精准命中了 Google 的信任危机&url=https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/index.html&via=Elepover" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/index.html&text=译：Stadia 游戏工作室之死，精准命中了 Google 的信任危机" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><strong>虽然 Stadia 还未葬送在 Google 的手里，但以史为鉴，Stadia 用户应该做好面对最坏结果的准备。</strong></p>
+<span id="more"></span>
+
+<p><em>本文译自 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/google-kills-plenty-projects-stadia-games-demise-problematic">Android Central</a>，原作 Michael Hicks，转载时请署明出处。</em></p>
+<p><img src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/w830_wm_blw/public/article_images/2021/02/graveyard-of-google-products-and-services.jpg" alt="Michael Hicks / Android Central"><br><em>图源：Michael Hicks / Android Central</em></p>
+<blockquote>
+<p>图中产品（从上到下，从左到右）分别是：</p>
+<ul>
+<li>Inbox by Gmail</li>
+<li>Google Cloud Print</li>
+<li>Google Play Music</li>
+<li>Allo</li>
+<li>App Maker</li>
+<li>Stadia</li>
+<li>YouTube Gaming</li>
+<li>Daydream</li>
+<li>Google Hangouts</li>
+<li>Works with Nest</li>
+<li>Google Reader</li>
+<li>Google+</li>
+</ul>
+</blockquote>
+<p>Google 广为人知的一大优良传统，就是把那些未能成为行业龙头的产品或品牌砍掉，再把残汤剩饭糅进新的项目而得到又一个新产品。比如 Google 新闻和 Google 阅读器合并成了新的 Google 新闻，Inbox 最棒的功能被糅到了 Gmail 里，Google Play 音乐变成了 YouTube 音乐……单在 2020 年，<a target="_blank" rel="noopener" href="https://www.androidcentral.com/5-features-google-killed-2020-and-5-it-replaced">Google 就砍掉或改名了 9 个服务</a>。</p>
+<p>Android Central 的记者 Jerry Hildenbrand 就为何 Google 杀死如此之多项目<a target="_blank" rel="noopener" href="https://www.androidcentral.com/heres-why-google-kills-so-many-its-projects">给出了合理的解释</a>：Google 通常是想籍此给予一些表现平平的软件或应用以新的生命，同时增添一些创新的东西。就像卢克·天行者（Luke Skywalker）说的那样：「其实它们并没有消失，它们只是重生了，只但愿是面向比从前更多的用户」。</p>
+<p>我不反对 Google 的软件策略。但我更担心它最近开发的产品和娱乐业务。Stadia 游戏娱乐工作室的仓促收场，是 Google 对表现平平的科技产品所怀抱的不耐烦的态度对其业务发展造成阻碍的又一证据。Google 砍的越多，新产品发布的时候，信任它的客户就会越来越少。我真的希望 Google 能切断这个负反馈循环。</p>
+<h2 id="Stadia-犹在，Stadia-万岁？"><a href="#Stadia-犹在，Stadia-万岁？" class="headerlink" title="Stadia 犹在，Stadia 万岁？"></a>Stadia 犹在，Stadia 万岁？</h2><p><img src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/w830/public/article_images/2021/01/journey-to-the-savage-planet-featured-image.jpg" alt="505 Games"><br><em>图源：505 Games</em></p>
+<p>2 月 2 日，Google 宣布 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/stadia-games-and-entertainment-shutting-down">Stadia 游戏娱乐工作室将关闭</a>。在 2019 年 3 月公之于众，并于当年 10 月在蒙特利尔成立，这是一家专致力于打造 Stadia 独家游戏的官方游戏开发工作室。Google 聘请了行业资深从业者 Jade Raymond 作为领头人，<a target="_blank" rel="noopener" href="https://www.androidcentral.com/google-stadia-acquires-typhoon-studios-journey-savage-planet-still-track">收购了台风游戏工作室</a>来壮大团队，还在 2020 年 3 月在洛杉矶成立了新的工作室。</p>
+<p>Stadia 游戏娱乐工作室发布了一款 Stadia 独家游戏：《野蛮星球之旅》（<em>Journey to the Savage Planet</em>）。这是台风游戏工作室在其一款老游戏的基础上，追加了一些新内容的作品。它本来就没什么热度，更是被这家工作室解体的新闻抢走了最后一点人气。</p>
+<blockquote>
+<p>Google 早就该知道了。成立游戏工作室是种长期投资，需要多年的努力才能回本。</p>
+</blockquote>
+<p>信不信由你，但事实上开发一款游戏需要的时间远远不止一年。现实就是这么回事。我<strong>不知道</strong> Raymond 在离开公司前还在忙着开发什么项目，但这种开发时间真的没啥好稀罕的。就算是更大、更专业的游戏工作室，也需要数年时间来开发一款作品。任何宣传材料或者 E3 预告片都不大可能是最终成型的作品，而且看上去都显得过于乐观。要论 Stadia 游戏娱乐工作室的解体原因，与其说是他们和 Google 高管透露了自己正在开发的价值数百万美元的故事类游戏：在这里面你可以和一只蟑螂、臭虫、蜘蛛、蜱、大黄蜂或者蝎子浪漫的在一起；更像是由于 Stadia 表现平平的销售报表或者订户数量罢了。</p>
+<p>Stadia 起步的非常艰难，只有少量昂贵、较老的游戏作品，而且也没有什么独特的功能。但日子一天天的过去，Stadia 慢慢的成长为了一个还算不错的平台，有了一些表现优秀的佳作移植如<a target="_blank" rel="noopener" href="https://www.androidcentral.com/cyberpunk-2077-stadia-review">《赛博朋克 2077》</a>和<a target="_blank" rel="noopener" href="https://www.androidcentral.com/hitman-3-stadia-review">《杀手 3》</a>。即便如此，Stadia 仍然需要一些时间和更多亮眼的独家作品，才能让玩家刮目相看，但 Google 看起来并不乐意给它时间。</p>
+<p>正如我的同事在他的 Stadia 分析中所指出的一样。通过开除或者重新分派开发者，<a target="_blank" rel="noopener" href="https://www.androidcentral.com/its-not-end-stadia-google-sending-terrible-message">Google 向外界释放出了糟糕的信号</a>：当它自己的母公司都不愿意向其投资的时候——更别说是在头两年，其它游戏开发商又有什么理由花费精力把自家作品移植到这个平台呢？</p>
+<p>与之相反，2012 年创办的亚马逊游戏工作室有数年的时间来开发游戏。虽然绝大多数作品都是史诗级大失败，但亚马逊的 CEO <a target="_blank" rel="noopener" href="https://finance.yahoo.com/news/amazon-next-ceo-says-committed-194448289.html">公开承诺</a>将继续向游戏开发投资，这也暗示了 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/amazon-luna-hands-on">Amazon Luna</a> 用户：未来他们也许能享受一些独家作品，并且亚马逊应该不会抛弃他们。</p>
+<p>亚马逊也许不会打造出下一款《堡垒之夜》，但只要管理层继续支持开发者们的努力，客户们就不会觉得自己的钱打水漂了。而在 Stadia 这边，不管它能活多久，大多数玩家都觉得它的道路是条覆车之轨。</p>
+<h2 id="Google-游戏潜力的「白日梦」"><a href="#Google-游戏潜力的「白日梦」" class="headerlink" title="Google 游戏潜力的「白日梦」"></a>Google 游戏潜力的「白日梦」</h2><p><img src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/w830/public/article_images/2019/05/google-daydream-vr-headset-hero-image.jpg" alt="Google"><br><em>图源：Google</em></p>
+<p>还记得 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/best-decade-google-cardboard">Google 纸板</a>吗？它帮助成千上万的人在无需负担高价的条件下享受到了虚拟现实的体验。尤其是在 Oculus 这种本身就十分昂贵的设备还要求更贵的 PC 的情况下，它迅速得到公众关注，并且广受好评。</p>
+<p>Google 在虚拟现实体验这方面确实打造了不少优秀的东西，比如 Expeditions，它能带着学生去参加虚拟郊游。但当自家 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/daydream">Daydream View</a> 的热度未能和三星的 Gear VR 匹敌的时候，Google 把它的注意力转移到了混合现实（augmented reality）上，顺手把它的 VR 系统卖给了联想，最终<a target="_blank" rel="noopener" href="https://www.androidcentral.com/googles-daydream-vr-platform-finally-and-fully-dead">把 Daydream 砍掉</a>并开源了 Google 纸板。（截至发稿时）上周 Google <a target="_blank" rel="noopener" href="https://www.androidcentral.com/tilt-brush-going-open-source">开源 Tilt Brush</a> 一事，明显表明 Google 不会再买帐了。</p>
+<p>与此同时，<a target="_blank" rel="noopener" href="https://www.androidcentral.com/oculus-quest-2">Oculus Quest 2</a> 销量优秀，超过 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/oculus-quest-developers-are-making-millions-dollars-quest-2">60 个 Quest 游戏</a>产生了超过 100 万美元的利润。据称苹果也不想放过这个市场，正在<a target="_blank" rel="noopener" href="https://www.imore.com/huge-apple-vr-headset-leak-reveals-two-8k-displays-3000-price-tag-0">开发 8K 的 VR 设备</a>。并且 Valve 也计划为 Index 开发一个<a target="_blank" rel="noopener" href="https://www.windowscentral.com/wireless-valve-index-way-new-patent-says-yes">无线的后继版本</a>。</p>
+<blockquote>
+<p>如果 Google 在虚拟现实上坚持下去了，对于 Stadia 来说也许就是个好事。</p>
+</blockquote>
+<p>想象一下，如果 Google 继续向虚拟现实领域投资，并且在 Stadia Pro 捆绑包里提供虚拟现实游戏，情况又会如何。比如 Quest 2 本质上就是个加强版头戴式 Android 设备，通过旁加载 apk 的方式，它也能让用户享受无线云游戏的功能。所以这也不是什么稀奇古怪的想法。除了向手机上流式传输主机级游戏以外，Stadia 本可以把自己宣传成另一种平台，一个不仅提供热门游戏的 VR 体验，还提供独家虚拟现实作品的平台。这也能使 Stadia 在游戏产业中具有独家特色，脱颖而出。</p>
+<p>可是，事与愿违。Google 近年来唯一的头戴式设备就是功能有限、昂贵且面向商业解决方案的<a target="_blank" rel="noopener" href="https://www.androidcentral.com/google-glass-enterprise-edition-2-now-much-easier-buy">第二代 Google 眼镜</a>。</p>
+<h2 id="是巩固，还是摧毁客户的信任"><a href="#是巩固，还是摧毁客户的信任" class="headerlink" title="是巩固，还是摧毁客户的信任"></a>是巩固，还是摧毁客户的信任</h2><p><img src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/w830_wm_brw/public/article_images/2020/10/nest-secure-dead-hero.jpg" alt="Nick Sutrich / Android Central"><br><em>图源：Nick Sutrich / Android Central</em></p>
+<p>Google 看起来不想支持除了 Android 手机和 Google 助理音响以外的任何东西，包括安全监控摄像头。</p>
+<p>2014 年，Google 收购了 Nest，试图籍此建立智能家居生态「适用于 Nest」。最终 Google 将 Nest 与其兼容设备收归 Google Home 品牌下。这就和 Google 很搭调，而且我们也是 Google Home app 的铁杆粉丝！</p>
+<p>但当 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/nest-secure-being-discontinued-and-people-are-rightfully-losing-their-minds">Google 决定停止更新 Nest Secure 产品线</a> 的时候，问题就来了：它曾经是个廉价、可定制、安全可靠的热门家庭安全系统，让我们轻松地编撰出了<a target="_blank" rel="noopener" href="https://www.androidcentral.com/best-home-security-systems">最佳家庭安全系统清单</a>——直到 Google 砍掉了它。剩下束手无措的客户们，浑然不知何时他们的家庭安全系统会停止工作。</p>
+<p>要把时间线捋直其实很简单。2020 年 8 月，<a target="_blank" rel="noopener" href="https://www.androidcentral.com/google-makes-another-big-push-smart-home-security-investing-adt">Google 给安达泰安全服务公司（ADT Security）投资了 4.5 亿美元</a>，承诺为安达泰提供 Nest 安全监控摄像头以巩固合作伙伴关系。三个月以后，Google 抛弃了 Nest Security 品牌，从而聚焦于它的新品牌，毫不在意它用了整整 5 年建立起的客户群体。</p>
+<p>那么现在的<a target="_blank" rel="noopener" href="https://www.androidcentral.com/best-home-security-systems">最佳家庭安全系统清单</a>上是谁呢？是亚马逊的 Ring Alarm.</p>
+<p>话虽如此，Google 还没彻底放弃 Nest，而且还计划发布 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/google-set-unveil-new-line-nest-cameras-2021">2021 新款 Nest 摄像头</a>。但是 Google 已经放弃了 Nest 的一大块，让消费者的困惑越来越深，从而选择其他品牌而非 Nest. Stadia 用户们，这种事情是不是听起来很熟悉？</p>
+<blockquote>
+<p>Google 会把 Stadia 卖给其他公司，然后把客户拱手让给亚马逊吗？这也是有前车之鉴了。</p>
+</blockquote>
+<p>如今的局面，看起来更像是作为一场实验，Google 把产品卖给消费者，然后再从市场上撤出来，寻求 B2B（business-to-business，企业对企业）业务销售。Nest 安全监控摄像头、Google 眼镜和 Nest Thermostat E 只是例子里的一小部分而已。这跟 Stadia 有啥关系？*<a target="_blank" rel="noopener" href="https://www.theverge.com/22260994/google-stadia-platform-white-label-option">The Verge</a>* 认为 Google 现在只想让 Stadia 保持上线足够时间，再把它当作个人云游戏服务卖给动视（Activision）或者艺电（EA）之类的游戏发行商。换句话说，Stadia 最终将是……你没听错，消费者掏钱，为一盘企对企交易的测试罢了。</p>
+<p>事到如今，人们也无从得知自己在 Stadia 上购买的游戏最终命运会如何。Google 是会承诺保留一些服务器，让玩家们还能继续游玩自己「购买的」游戏呢，还是告诉他们还剩下若干个月，然后一切就此了结呢。</p>
+<h2 id="一而再，再而三"><a href="#一而再，再而三" class="headerlink" title="一而再，再而三"></a>一而再，再而三</h2><p><img src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/w830_wm_brw/public/article_images/2017/02/google-logo-dark-glfx-glfx.jpg" alt="Android Central"><br><em>图源：Android Central</em></p>
+<p>作为一名 Stadia Pro 订户，我也有 PS5，Xbox One X，PC 和任天堂 Switch. 所以如果 Google 真的延续其优良传统，把 Stadia 变成拿来卖给其他公司的赚钱的产品，我也无所谓。但必须承认的是，我肯定会极度的失望。</p>
+<blockquote>
+<p>Stadia <strong>现在</strong>就需要一些亮眼的独家作品，才能说服人们：Stadia 不会成为另一个失去 Google 支持的僵尸产品。</p>
+</blockquote>
+<p>即便如此，Stadia 的游戏库还在增长，并且表现就和次世代主机一样。如果 Google 真的坚持下去了，这也可能是买不到次世代主机但又想体验次世代游戏的玩家的避风港。就算许多玩家因为 Stadia 的流量使用而回避它，那 Google 也可以为 <a target="_blank" rel="noopener" href="https://www.androidcentral.com/google-fi">Google Fi</a> 无限流量套餐订户赠送免费的 Stadia Pro. 但这些都没能实现。</p>
+<p>越早越好，即使它的母公司有可能把它卖掉，Stadia 剩下的开发者也需要尽快发布一些亮眼的独家作品，从而给人们一个坚持在这个平台的理由。它也需要给持怀疑态度的玩家一个解释，保证即使 Google 卖掉这个平台，他们付的钱也不会全打水漂。它还应该公开资助独立工作室以制作独家游戏的计划。但是，鉴于 Google 的传统习俗，这恐怕是天方夜谭。</p>
+<p>人们都信任 Android 手机和它的 Google 助理。但如果 Google 抛弃 Stadia，下一次它发布新硬件产品的时候，我就不会那么期待了。要得了多少年，Google 又会把它创新的巅峰之作丢进垃圾堆呢。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://daily.elepover.com/2021/02/18/google-kills-plenty-projects-stadia-games-demise-problematic/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//elepover-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//elepover-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2021/03/27/vsync/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2020/05/15/optimus/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://static.elepover.com/avatar/avatar.png" alt="Elepover's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="https://t.me/kruintian" target="_blank" title="Contact me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Contact me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/05/">May 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">March 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/02/">February 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">May 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">March 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">January 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">October 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">14</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">info</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/donate" title="Donate">
+                
+                    <i class="material-icons sidebar-material-icons">money</i>
+                
+                Donate
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/friends" title="Friends">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                Friends
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                Timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/comments" title="Comments">
+                
+                    <i class="material-icons sidebar-material-icons">comment</i>
+                
+                Comments
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Elepover" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/kruintian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Elepover's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/lazyload.min.js", true)</script>
+
+
+
+    <script>lsloader.load("js_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/js.min.js", true)</script>
+
+
+
+    <script>lsloader.load("np_js","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/nprogress.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","https://cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/hanabi-browser-bundle.js", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://apis.elepover.com/bing/');
+    });
+</script>
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
