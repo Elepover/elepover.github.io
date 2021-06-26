@@ -21,10 +21,14 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
       - name: Build
         run: npm run build
+      - name: Custom Error Pages
+        run: cp 404.html ./public
+      - name: Custom gitignore for master branch
+        run: cp .gitignore ./public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
